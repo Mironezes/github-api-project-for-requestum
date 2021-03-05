@@ -1,0 +1,244 @@
+// Vars
+$color-base: #24292e;
+$color-white: #fff;
+$page-bg: #f6f8fa;
+$bg-gray-dark: $color-base;
+
+
+// Base 
+* {
+  outline: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 400;
+  background-color: $page-bg;
+}
+
+.page-title {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+ul {
+  padding-left: 30px;
+}
+
+
+// Loader 
+.loader {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+
+// Header 
+.header {
+  & {
+    padding-top: 35px;
+    padding-bottom: 35px;
+    font-size: 1.1rem;
+    background: $bg-gray-dark;
+  }
+  &-logo a {
+    font-size: 1.25rem;
+    font-weight: 800;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $color-white;
+  }
+  &-menu {
+    position: relative;
+  }
+  &-menu a {
+    margin-right: 35px;
+    text-decoration: none;
+    padding-bottom: 4px;
+    color: $color-white;
+  }
+  &-menu a.active {
+    font-weight: 600;
+    border-bottom-width: 2px;
+  }
+  &-menu a:last-of-type {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .header {
+    &-menu {
+      margin: 0 auto;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    &-logo {
+      width: 100%;
+      margin-bottom: 35px;
+      text-align: center;
+    }
+  }
+}
+
+
+// Main container 
+.page-content {
+  min-height: calc(100vh - 250px);
+  padding: 65px 0;
+}
+
+.content-area {
+  &-inner {
+    border-radius: 4px;
+    padding: 25px;
+  }
+}
+
+
+// Search Panel
+.search-panel {
+  margin-bottom: 35px;
+}
+
+
+// Breadcrumbs
+.breadcrumbs {
+  & {
+    padding-bottom: 25px;
+  }
+  & a {
+    display: flex;
+    align-items: center;
+  }
+}
+
+
+// About
+.about-app {
+  padding: 50px;
+}
+
+
+// Search Panel
+.search-panel {
+  & {
+    margin-bottom: 65px;
+  }  
+  & h1 {
+    font-size: 2.25rem;
+  }
+  &-filters {
+    margin-bottom: 25px;
+  }
+}
+
+
+// Search Results
+.search-results {
+  & {
+    margin-bottom: 50px;
+  }
+  & h3 {
+    margin-bottom: 25px;
+    font-size: 1.65rem;
+  }
+  &-card {
+    display: flex;
+    flex-direction: column;
+  }
+  &-card h2 {
+    word-break: break-word;
+  }
+  &-card span {
+    display: flex;
+    flex-direction: column;
+  }
+  &-card .repo-details span {
+    margin-bottom: 10px;
+  }
+  &-card .repo-details__desc {
+    max-height: 40px;
+    overflow: hidden;
+  }
+}
+
+
+// History 
+.history {
+  & {
+    margin-top: 50px;
+  }
+  & h3 {
+    font-size: 2rem;
+  }
+  &-tile {
+    padding: 10px;
+    text-align: center;
+  }
+}
+
+
+//Profile
+.profile {
+  &-details {
+    margin-bottom: 50px;
+  }
+  &-details h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 2.25rem;
+  }
+  &-latest-repos h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  &-latest-repos a {
+    color: $color-base;
+  }
+  &-stats {
+    display: flex;
+  }
+  &-stats span {
+    margin-right: 15px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .profile {
+    &-stats {
+      flex-direction: column;
+    }
+  }
+}
+
+
+// Footer 
+  .footer {
+    & {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 35px;
+      padding-bottom: 35px;
+      color: $color-white;
+      background: $bg-gray-dark;
+    }
+    & span {
+      display: block;
+      font-size: .95rem;
+      text-align: center;
+    }
+  }
+
